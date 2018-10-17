@@ -12,9 +12,7 @@ public class Melee : MonoBehaviour {
 
     void Update()
     {
-        if (timeBtwAttack <= 0)
-        {
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1)&& timeBtwAttack <= 0)
             {
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
@@ -24,7 +22,6 @@ public class Melee : MonoBehaviour {
                 }
                 timeBtwAttack = startTimeBtwAttack;
             }
-        }
         else
         {
             timeBtwAttack -= Time.deltaTime;
