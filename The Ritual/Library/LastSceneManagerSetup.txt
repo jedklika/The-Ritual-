@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Overworld.unity
+=======
+- path: Assets/Scenes/OpeningScene.unity
+>>>>>>> 3c7e2432d49cd9d12c60e45ea866b19e64970276
   isLoaded: 1
   isActive: 1

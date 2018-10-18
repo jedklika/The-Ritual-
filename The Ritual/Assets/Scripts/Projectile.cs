@@ -27,7 +27,7 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime * 5);
+      //  transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime * 5);
         RaycastHit2D hitinfo = Physics2D.Raycast(transform.position, transform.up, distance, WhatIsSolid);
         if (hitinfo.collider != null)
         {

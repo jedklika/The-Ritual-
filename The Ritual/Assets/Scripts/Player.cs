@@ -50,21 +50,31 @@ public class Player : MonoBehaviour
            
         }
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+<<<<<<< HEAD
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
         if (TimeBtwShot <= 0)
         {
             if (Input.GetMouseButtonDown(0) && GunammoCount > 0)
+=======
+       // float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+       // transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
+        if (TimeBtwShot <= 0 && Input.GetMouseButtonDown(0) && ammoCount > 0)
+>>>>>>> 3c7e2432d49cd9d12c60e45ea866b19e64970276
             {
                 Instantiate(Projectile, ShotPoint.position, transform.rotation);
                 TimeBtwShot = StartTimeBtwShot;
                 GunammoCount -= 1;
             }
-        }
         else
-        {
+             {
             TimeBtwShot -= Time.deltaTime;
+<<<<<<< HEAD
         }
+=======
+            ammoCount -= 1;
+             }
+>>>>>>> 3c7e2432d49cd9d12c60e45ea866b19e64970276
         if (Input.GetMouseButtonDown(1) && timeBtwAttack <= 0)
         {
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
