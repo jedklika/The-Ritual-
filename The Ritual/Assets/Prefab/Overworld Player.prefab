@@ -67,10 +67,8 @@ GameObject:
   - component: {fileID: 4343641779065640}
   - component: {fileID: 212456138550418852}
   - component: {fileID: 61331682399412184}
-  - component: {fileID: 114049657740156556}
-  - component: {fileID: 114474701442401566}
+  - component: {fileID: 114127345734468494}
   - component: {fileID: 50971806345068106}
-  - component: {fileID: 114362112667965568}
   m_Layer: 0
   m_Name: Overworld Player
   m_TagString: Player
@@ -178,7 +176,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16315484, y: 0.23684031}
   m_EdgeRadius: 0
---- !u!114 &114049657740156556
+--- !u!114 &114127345734468494
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,26 +187,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 214c1e0315c67f94f91b4b155b9979bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 61331682399412184}
-  health: 100
+  col: {fileID: 0}
+  health: 0
   speed: 5
---- !u!114 &114362112667965568
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1950740635113818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4592517e567d2db4da0301f92691dac4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  ammoCount: 0
+  Projectile: {fileID: 0}
+  ShotPoint: {fileID: 0}
+  StartTimeBtwShot: 0
+  attackRange: 0
   startTimeBtwAttack: 0
   attackPos: {fileID: 0}
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 0
-  attackRange: 0
   damage: 0
 --- !u!114 &114469822827081534
 MonoBehaviour:
@@ -224,24 +215,6 @@ MonoBehaviour:
   Projectile: {fileID: 1777260482176474, guid: d4ae12d1abd73af48a8870fb0f622952, type: 2}
   ShotPoint: {fileID: 4821581666486660}
   StartTimeBtwShot: 0
---- !u!114 &114474701442401566
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1950740635113818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4592517e567d2db4da0301f92691dac4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startTimeBtwAttack: 0
-  attackPos: {fileID: 4143553527826162}
-  whatIsEnemies:
-    serializedVersion: 2
-    m_Bits: 0
-  attackRange: 0
-  damage: 0
 --- !u!212 &212456138550418852
 SpriteRenderer:
   m_ObjectHideFlags: 1
