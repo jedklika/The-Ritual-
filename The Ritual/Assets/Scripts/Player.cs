@@ -73,6 +73,17 @@ public class Player : MonoBehaviour
         {
             timeBtwAttack -= Time.deltaTime;
         }
+        if (Input.GetKeyDown(KeyCode.P) && Throwammocount > 0)
+        {
+            Instantiate(Projectile, ShotPoint.position, transform.rotation);
+            timeBtwThrow = startTimeBtwThrow;
+            Throwammocount -= 1;
+        }
+        else
+        {
+            timeBtwThrow -= Time.deltaTime;
+
+        }
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
