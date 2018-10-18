@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour {
         StartCoroutine(SpawnEnemy());
         
     }
-    void LevelLoader()
+    public void LevelLoader()
     {
 
     }
