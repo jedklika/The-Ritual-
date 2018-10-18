@@ -23,6 +23,9 @@ public class Player : MonoBehaviour
     public Transform attackPos;
     public LayerMask whatIsEnemies;
     public int damage;
+    private float timeBtwPower;
+    public float startTimeBtwPower;
+    public float PowerRange;
 
     void Start()
     {
@@ -84,6 +87,21 @@ public class Player : MonoBehaviour
             timeBtwThrow -= Time.deltaTime;
 
         }*/
+
+        if (Input.GetKeyDown(KeyCode.Space) && timeBtwPower <= 0)
+        {
+            Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, PowerRange, whatIsEnemies);
+            for (int i = 0; i < enemiesToDamage.Length; i++)
+            {
+                enemiesToDamage[i].GetComponent<EnemyAICombat>().TakeDamage(damage);
+
+            }
+            timeBtwPower = startTimeBtwPower;
+        }
+        else
+        {
+            timeBtwPower -= Time.deltaTime;
+        }
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
