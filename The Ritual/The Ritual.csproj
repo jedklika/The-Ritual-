@@ -308,6 +308,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\EnemyAICombat.cs" />
     <Compile Include="Assets\Scripts\EnemyAIOverworld.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Melee.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Point.cs" />

@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour {
     public GameObject Foe;
-    
+
+
 
     void Start()
     {
+
         StartCoroutine(SpawnEnemy());
         
     }

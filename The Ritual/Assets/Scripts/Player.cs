@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
         {
            
         }
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        //Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
        // float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
        // transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
         if (TimeBtwShot <= 0 && Input.GetMouseButtonDown(0) && ammoCount > 0)
@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
         else
              {
             TimeBtwShot -= Time.deltaTime;
-            ammoCount -= 1;
+           // ammoCount -= 1;
              }
         if (Input.GetMouseButtonDown(1) && timeBtwAttack <= 0)
         {
@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
         {
             timeBtwAttack -= Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.P) && Throwammocount > 0)
+        /*if (Input.GetKeyDown(KeyCode.P) && Throwammocount > 0)
         {
             Instantiate(Projectile, ShotPoint.position, transform.rotation);
             timeBtwThrow = startTimeBtwThrow;
@@ -83,15 +83,15 @@ public class Player : MonoBehaviour
         {
             timeBtwThrow -= Time.deltaTime;
 
-        }
+        }*/
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Collider")
+        if (collision.tag == "Bounds")
         {
             Debug.Log("Its hit bitch");
-            SceneManager.LoadScene("Practice");
+            SceneManager.LoadScene("OpeningScene");
         }
         if(collision.tag == "Foe")
         {
