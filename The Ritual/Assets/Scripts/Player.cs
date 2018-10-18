@@ -12,7 +12,8 @@ public class Player : MonoBehaviour
     float moveHorizontal;
     float moveVertical;
     public int speed = 5;
-    public int ammoCount;
+    public int GunammoCount;
+    public int Throwammocount;
     public GameObject Projectile;
     public Transform ShotPoint;
     private float TimeBtwShot;
@@ -20,6 +21,8 @@ public class Player : MonoBehaviour
     public float attackRange;
     private float timeBtwAttack;
     public float startTimeBtwAttack;
+    private float timeBtwThrow;
+    public float startTimeBtwThrow;
     public Transform attackPos;
     public LayerMask whatIsEnemies;
     public int damage;
@@ -51,16 +54,16 @@ public class Player : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
         if (TimeBtwShot <= 0)
         {
-            if (Input.GetMouseButtonDown(0) && ammoCount > 0)
+            if (Input.GetMouseButtonDown(0) && GunammoCount > 0)
             {
                 Instantiate(Projectile, ShotPoint.position, transform.rotation);
                 TimeBtwShot = StartTimeBtwShot;
+                GunammoCount -= 1;
             }
         }
         else
         {
             TimeBtwShot -= Time.deltaTime;
-            ammoCount -= 1;
         }
         if (Input.GetMouseButtonDown(1) && timeBtwAttack <= 0)
         {
@@ -76,19 +79,24 @@ public class Player : MonoBehaviour
         {
             timeBtwAttack -= Time.deltaTime;
         }
-
+        if (Input.GetKeyDown(KeyCode.P) && Throwammocount > 0)
+        {
+            Instantiate(Projectile, ShotPoint.position, transform.rotation);
+            timeBtwThrow = startTimeBtwThrow;
+            Throwammocount -= 1;
+        }
+        else
+        {
+            timeBtwThrow -= Time.deltaTime;
+            
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Collider")
         {
             Debug.Log("Its hit bitch");
-            SceneManager.LoadScene("Practice");
+            SceneManager.LoadScene("Overworld");
         }
-        if(collision.tag == "Foe")
-        {
-            SceneManager.LoadScene("Combat");
-        }
-
     }
 }
