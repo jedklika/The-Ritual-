@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     float moveVertical;
     public int speed = 5;
     public int ammoCount;
+    public int ThrowammoCount;
     public GameObject Projectile;
     public Transform ShotPoint;
     private float TimeBtwShot;
@@ -26,6 +27,8 @@ public class Player : MonoBehaviour
     private float timeBtwPower;
     public float startTimeBtwPower;
     public float PowerRange;
+    private float timeBtwThrow;
+    public float startTimeBtwThrow;
 
 
     void Start()
@@ -57,11 +60,11 @@ public class Player : MonoBehaviour
             {
                 Instantiate(Projectile, ShotPoint.position, transform.rotation);
                 TimeBtwShot = StartTimeBtwShot;
-            }
+            ammoCount -= 1;
+        }
         else
              {
             TimeBtwShot -= Time.deltaTime;
-           // ammoCount -= 1;
              }
         if (Input.GetMouseButtonDown(1) && timeBtwAttack <= 0)
         {
@@ -77,17 +80,17 @@ public class Player : MonoBehaviour
         {
             timeBtwAttack -= Time.deltaTime;
         }
-        /*if (Input.GetKeyDown(KeyCode.P) && Throwammocount > 0)
+        if (Input.GetKeyDown(KeyCode.P) && ThrowammoCount > 0)
         {
             Instantiate(Projectile, ShotPoint.position, transform.rotation);
             timeBtwThrow = startTimeBtwThrow;
-            Throwammocount -= 1;
+            ThrowammoCount -= 1;
         }
         else
         {
             timeBtwThrow -= Time.deltaTime;
 
-        }*/
+        }
         if (Input.GetKeyDown(KeyCode.Space) && timeBtwPower <= 0)
         {
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, PowerRange, whatIsEnemies);
@@ -112,6 +115,14 @@ public class Player : MonoBehaviour
             Debug.Log("Its hit bitch");
             GameManager.gm.LevelLoader();
            //SceneManager.LoadScene("OpeningScene");
+        }
+        if (collision.tag == "GunAmmo")
+        {
+            ammoCount += 1;
+        }
+        if (collision.tag == "Throw Ammo")
+        {
+            ThrowammoCount += 1;
         }
 
     }
