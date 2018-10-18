@@ -372,7 +372,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4545796927745098, guid: 4aff911c64a15c54ba6ea3785b59f4da, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.32
       objectReference: {fileID: 0}
     - target: {fileID: 4545796927745098, guid: 4aff911c64a15c54ba6ea3785b59f4da, type: 2}
       propertyPath: m_LocalRotation.x
@@ -393,6 +393,21 @@ Prefab:
     - target: {fileID: 4545796927745098, guid: 4aff911c64a15c54ba6ea3785b59f4da, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114133150577546372, guid: 4aff911c64a15c54ba6ea3785b59f4da,
+        type: 2}
+      propertyPath: startTimeBtwPower
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114133150577546372, guid: 4aff911c64a15c54ba6ea3785b59f4da,
+        type: 2}
+      propertyPath: PowerRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114133150577546372, guid: 4aff911c64a15c54ba6ea3785b59f4da,
+        type: 2}
+      propertyPath: whatIsEnemies.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aff911c64a15c54ba6ea3785b59f4da, type: 2}
