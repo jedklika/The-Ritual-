@@ -124,6 +124,9 @@ public class Player : MonoBehaviour
         {
             ThrowammoCount += 1;
         }
-
+        if (collision.tag == "Health")
+        {
+            health += 1;
+        }
     }
 }
