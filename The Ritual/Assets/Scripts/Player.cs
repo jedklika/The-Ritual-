@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
         {
            
         }
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+       // Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
        // float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
        // transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
         if (TimeBtwShot <= 0 && Input.GetMouseButtonDown(0) && ammoCount > 0)
