@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4685120736494580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,10 +36,11 @@ GameObject:
   - component: {fileID: 4181279389766458}
   - component: {fileID: 212436993447681748}
   - component: {fileID: 61038383867980964}
+  - component: {fileID: 114239417217346880}
   - component: {fileID: 50615691956525374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Foe 1
-  m_TagString: Player
+  m_TagString: Foe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4459832493305500}
   - component: {fileID: 114660904862577458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4513170244173012}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AttackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,6 +176,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7779411, y: 1.1189246}
   m_EdgeRadius: 0
+--- !u!114 &114239417217346880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241716607954102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30a5fd6160a9b0b4db83a023cb6e4668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  stoppingDistance: 2
+  retreatDistance: 1
+  health: 10
+  StartTimeBtwShot: 1
+  Projectile: {fileID: 1059189550690438, guid: 1badfecbd38d52244959a32ee4310832, type: 2}
 --- !u!114 &114660904862577458
 MonoBehaviour:
   m_ObjectHideFlags: 1
