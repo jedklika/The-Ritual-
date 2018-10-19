@@ -10,10 +10,12 @@ public class Projectile : MonoBehaviour
     public float distance;
     public int damage;
     public LayerMask WhatIsSolid;
+    public Rigidbody2D rigid;
     // Use this for initialization
     void Start()
     {
-        target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //rigid = 
+       // target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -30,15 +32,11 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime * 5);
-        RaycastHit2D hitinfo = Physics2D.Raycast(transform.position, transform.up, distance, WhatIsSolid);
-        if (hitinfo.collider != null)
-        {
-            if (hitinfo.collider.CompareTag("Foe"))
-            {
-                Debug.Log("Foe Must Take Damage");
-                hitinfo.collider.GetComponent<EnemyAICombat>().TakeDamage(damage);
-            }
-        }
+
+        Vector3 dir = (Input.mousePosition - target).normalized;
+      //  rigidbody2D.AddForce(dir * amount);
+
+
+
     }
 }

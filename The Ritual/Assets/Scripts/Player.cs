@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     //[SerializeField] string loadLevel;
 
     public BoxCollider2D col;
+    public Rigidbody2D rig;
     public int health;
     float moveHorizontal;
     float moveVertical;
@@ -33,6 +34,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        rig = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
 
     }
@@ -58,7 +60,9 @@ public class Player : MonoBehaviour
        // transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
         if (TimeBtwShot <= 0 && Input.GetMouseButtonDown(0) && ammoCount > 0)
             {
-                Instantiate(Projectile, ShotPoint.position, transform.rotation);
+
+                GameObject round = Instantiate(Projectile, ShotPoint.position, transform.rotation);
+               // Destroy(round);
                 TimeBtwShot = StartTimeBtwShot;
             ammoCount -= 1;
         }
@@ -131,7 +135,7 @@ public class Player : MonoBehaviour
             Debug.Log("Its hit bitch");
             GameManager.gm.LevelLoader("West Border");
         }
-       /* if (collision.tag == "GunAmmo")
+        if (collision.tag == "GunAmmo")
         {
             ammoCount += 1;
         }
@@ -142,6 +146,6 @@ public class Player : MonoBehaviour
         if (collision.tag == "Health")
         {
             health += 1;
-        }*/
+        }
     }
 }

@@ -7,8 +7,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
     public GameObject Foe;
     public static GameManager gm = null;
+    public int ammoCount;
+    public int ThrowammoCount;
 
-     void Awake()
+    void Awake()
     {
 
         if (gm == null) gm = this;
@@ -27,7 +29,7 @@ public class GameManager : MonoBehaviour {
         if (current.name == "Scene 1,1")
         {
             if(border == "North Border")
-            {
+            {               
                 SceneManager.LoadScene("Scene 0,1");
             }
            else if(border == "South Border")
@@ -41,6 +43,7 @@ public class GameManager : MonoBehaviour {
            else if(border == "West Border")
             {
                 SceneManager.LoadScene("Scene 1,0");
+              
             }
         }
        else if (current.name == "Scene 0,0")
@@ -212,7 +215,7 @@ public class GameManager : MonoBehaviour {
                 yield return new WaitForSeconds(1.0f);
                 spawnCountdown--;
             }
-            GameObject enemy = Instantiate(Foe, transform.position, Quaternion.identity);
+            GameObject enemy = Instantiate(Foe, transform.position, Quaternion.identity);           
             spawnCountdown = 10.0f;
             while(spawnCountdown > 0)
             {
