@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager gm = null;
     public int ammoCount;
     public int ThrowammoCount;
+    public int health;
 
     void Awake()
     {

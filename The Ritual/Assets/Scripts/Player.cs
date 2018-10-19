@@ -16,8 +16,6 @@ public class Player : MonoBehaviour
     public int ammoCount;
     public int ThrowammoCount;
     public GameObject Projectile;
-   // public GameObject point;
-    public Transform ShotPoint;
     private float TimeBtwShot;
     public float StartTimeBtwShot;
     public float attackRange;
@@ -87,7 +85,7 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.P) && ThrowammoCount > 0)
         {
-            Instantiate(Projectile, ShotPoint.position, transform.rotation);
+           // Instantiate(Projectile, ShotPoint.position, transform.rotation);
             timeBtwThrow = startTimeBtwThrow;
             ThrowammoCount -= 1;
         }

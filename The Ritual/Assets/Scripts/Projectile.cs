@@ -24,7 +24,7 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
        
-        if (collision.tag == "Collider")
+        if (collision.tag == "Foe")
         {
             GameObject.Destroy(this.gameObject);
         }
