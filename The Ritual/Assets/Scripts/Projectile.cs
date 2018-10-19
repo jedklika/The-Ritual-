@@ -28,6 +28,10 @@ public class Projectile : MonoBehaviour
         {
             GameObject.Destroy(this.gameObject);
         }
+        if (collision.tag == "Collider")
+        {
+            GameObject.Destroy(this.gameObject);
+        }
     }
 
     // Update is called once per frame
