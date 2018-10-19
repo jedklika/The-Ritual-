@@ -62,7 +62,11 @@ public class Player : MonoBehaviour
 
             GameObject p = Instantiate(Projectile, transform.position, transform.rotation);
                 TimeBtwShot = StartTimeBtwShot;
+<<<<<<< HEAD
                 ammoCount -= 1;
+=======
+            GameManager.gm.ammoCount -= 1;
+>>>>>>> 0671e40f25b5eb27437792fd0250f2ffc1b4336a
         }
         else
              {
@@ -86,7 +90,7 @@ public class Player : MonoBehaviour
         {
            // Instantiate(Projectile, ShotPoint.position, transform.rotation);
             timeBtwThrow = startTimeBtwThrow;
-            ThrowammoCount -= 1;
+            GameManager.gm.ThrowammoCount -= 1;
         }
         else
         {
@@ -98,7 +102,7 @@ public class Player : MonoBehaviour
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, PowerRange, whatIsEnemies);
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
-                enemiesToDamage[i].GetComponent<EnemyAICombat>().TakeDamage(damage);
+                enemiesToDamage[i].GetComponent<EnemyAICombat>().TakeDamage(GameManager.gm.damage);
 
             }
             timeBtwPower = startTimeBtwPower;
