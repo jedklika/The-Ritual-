@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
     public int damage;
     public LayerMask WhatIsSolid;
     public Rigidbody2D rigid;
+    public GameObject Foe1;
     
     // Use this for initialization
     void Start()
@@ -26,7 +27,7 @@ public class Projectile : MonoBehaviour
        
         if (collision.tag == "Foe")
         {
-            GameObject.Destroy(this.gameObject);
+            GameManager.gm.Foe1.EnemyAICombat.TakeDamage(damage);
         }
         if (collision.tag == "Collider")
         {
