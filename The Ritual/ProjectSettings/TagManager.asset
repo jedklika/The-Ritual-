@@ -15,6 +15,7 @@ TagManager:
   - West Border
   - Health
   - Point
+  - Projectile
   layers:
   - Default
   - TransparentFX

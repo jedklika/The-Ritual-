@@ -25,10 +25,6 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
        
-        if (collision.tag == "Foe")
-        {
-            GameManager.gm.Foe1.EnemyAICombat.TakeDamage(damage);
-        }
         if (collision.tag == "Collider")
         {
             GameObject.Destroy(this.gameObject);
