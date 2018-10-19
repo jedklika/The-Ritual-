@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
     public GameObject Foe;
     public static GameManager gm = null;
-    public Scene[,] Scenes = new Scene[3,3]; 
+    public string[,] Scenes = new string[3,3]; 
 
      void Awake()
     {
