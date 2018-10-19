@@ -139,6 +139,7 @@ public class Player : MonoBehaviour
         if (collision.tag == "GunAmmo")
         {
             ammoCount += 1;
+            Debug.Log("" + ammoCount);
         }
         if (collision.tag == "Throw Ammo")
         {
