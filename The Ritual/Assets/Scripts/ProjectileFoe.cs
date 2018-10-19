@@ -12,7 +12,7 @@ public class ProjectileFoe : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        Invoke("DestroyProjectile", lifeTime);
+      //  Invoke("DestroyProjectile", lifeTime);
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         target = new Vector2(Player.position.x, Player.position.y);
 

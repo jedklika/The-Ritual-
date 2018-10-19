@@ -206,8 +206,10 @@ public class GameManager : MonoBehaviour {
     IEnumerator SpawnEnemy()
     {
         float spawnCountdown;
+        Scene current;
         while (true)
         {
+            
             spawnCountdown = 10.0f;
             while(spawnCountdown > 0)
             {
@@ -215,9 +217,10 @@ public class GameManager : MonoBehaviour {
                 yield return new WaitForSeconds(1.0f);
                 spawnCountdown--;
             }
+            current = SceneManager.GetActiveScene();
             GameObject enemy = Instantiate(Foe, transform.position, Quaternion.identity);           
             spawnCountdown = 10.0f;
-            while(spawnCountdown > 0)
+            while(spawnCountdown > 0 && current == SceneManager.GetActiveScene() )
             {
                 Debug.Log("Remaining Time: " + spawnCountdown);
                 yield return new WaitForSeconds(1.0f);

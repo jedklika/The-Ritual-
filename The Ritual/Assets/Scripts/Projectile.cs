@@ -11,18 +11,19 @@ public class Projectile : MonoBehaviour
     public int damage;
     public LayerMask WhatIsSolid;
     public Rigidbody2D rigid;
+    
     // Use this for initialization
     void Start()
     {
-        //rigid = 
-       // target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+   
+        target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        target.z = 0.0f;
+        target = target - transform.position;
+        StartCoroutine(DestroyBullet());
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Foe")
-        {
-            GameObject.Destroy(this.gameObject);
-        }
+       
         if (collision.tag == "Collider")
         {
             GameObject.Destroy(this.gameObject);
@@ -32,11 +33,14 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        Vector3 dir = (Input.mousePosition - target).normalized;
-      //  rigidbody2D.AddForce(dir * amount);
+        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
 
 
+    }
+    IEnumerator DestroyBullet()
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
     }
 }

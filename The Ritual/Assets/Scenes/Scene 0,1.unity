@@ -197,11 +197,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 0}
+  rig: {fileID: 0}
   health: 0
   speed: 5
   ammoCount: 0
   ThrowammoCount: 0
-  Projectile: {fileID: 0}
+  Projectile: {fileID: 1777260482176474, guid: d4ae12d1abd73af48a8870fb0f622952, type: 2}
   ShotPoint: {fileID: 0}
   StartTimeBtwShot: 0
   attackRange: 0
@@ -819,6 +820,12 @@ Prefab:
       propertyPath: m_Simulated
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114908525890262176, guid: 193322d13958f224197797df3f2ecd78,
+        type: 2}
+      propertyPath: Projectile
+      value: 
+      objectReference: {fileID: 1777260482176474, guid: d4ae12d1abd73af48a8870fb0f622952,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 193322d13958f224197797df3f2ecd78, type: 2}
   m_IsPrefabAsset: 0

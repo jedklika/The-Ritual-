@@ -13,6 +13,8 @@ TagManager:
   - North Border
   - East Border
   - West Border
+  - Health
+  - Point
   layers:
   - Default
   - TransparentFX

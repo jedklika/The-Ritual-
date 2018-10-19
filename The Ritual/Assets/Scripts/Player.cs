@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public int ammoCount;
     public int ThrowammoCount;
     public GameObject Projectile;
+   // public GameObject point;
     public Transform ShotPoint;
     private float TimeBtwShot;
     public float StartTimeBtwShot;
@@ -61,7 +62,7 @@ public class Player : MonoBehaviour
         if (TimeBtwShot <= 0 && Input.GetMouseButtonDown(0) && ammoCount > 0)
             {
 
-                GameObject round = Instantiate(Projectile, ShotPoint.position, transform.rotation);
+             GameObject p = Instantiate(Projectile, transform.position, transform.rotation);
                // Destroy(round);
                 TimeBtwShot = StartTimeBtwShot;
             ammoCount -= 1;

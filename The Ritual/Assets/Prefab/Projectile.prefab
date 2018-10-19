@@ -149,3 +149,4 @@ MonoBehaviour:
   WhatIsSolid:
     serializedVersion: 2
     m_Bits: 1280
+  rigid: {fileID: 0}
