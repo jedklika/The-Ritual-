@@ -9,6 +9,10 @@ TagManager:
   - Foe
   - GunAmmo
   - Throw Ammo
+  - South Border
+  - North Border
+  - East Border
+  - West Border
   layers:
   - Default
   - TransparentFX

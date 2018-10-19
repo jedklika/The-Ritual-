@@ -108,15 +108,30 @@ public class Player : MonoBehaviour
 
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Bounds")
+     
+        if (collision.tag == "North Border")
         {
             Debug.Log("Its hit bitch");
-            GameManager.gm.LevelLoader();
-           //SceneManager.LoadScene("OpeningScene");
+            GameManager.gm.LevelLoader("North Border");
         }
-        if (collision.tag == "GunAmmo")
+        if (collision.tag == "South Border")
+        {
+            Debug.Log("Its hit bitch");
+            GameManager.gm.LevelLoader("South Border");
+        }
+        if(collision.tag == "East Border")
+        {
+            Debug.Log("Its hit bitch");
+            GameManager.gm.LevelLoader("East Border");
+        }
+        if(collision.tag == "West Border")
+        {
+            Debug.Log("Its hit bitch");
+            GameManager.gm.LevelLoader("West Border");
+        }
+       /* if (collision.tag == "GunAmmo")
         {
             ammoCount += 1;
         }
@@ -127,6 +142,6 @@ public class Player : MonoBehaviour
         if (collision.tag == "Health")
         {
             health += 1;
-        }
+        }*/
     }
 }

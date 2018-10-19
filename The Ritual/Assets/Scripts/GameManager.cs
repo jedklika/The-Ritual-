@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
     public GameObject Foe;
     public static GameManager gm = null;
-    public string[,] Scenes = new string[3,3]; 
 
      void Awake()
     {
@@ -15,16 +14,188 @@ public class GameManager : MonoBehaviour {
         if (gm == null) gm = this;
         else if (gm != null) Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
-        
-         
+
     }
     void Start()
     {
         StartCoroutine(SpawnEnemy());
         
     }
-    public void LevelLoader()
+    public void LevelLoader(string border)
     {
+        Scene current = SceneManager.GetActiveScene();
+        if (current.name == "Scene 1,1")
+        {
+            if(border == "North Border")
+            {
+                SceneManager.LoadScene("Scene 0,1");
+            }
+           else if(border == "South Border")
+            {
+                SceneManager.LoadScene("Scene 2,1");
+            }
+           else if(border == "East Border")
+            {
+                SceneManager.LoadScene("Scene 1,2");
+            }
+           else if(border == "West Border")
+            {
+                SceneManager.LoadScene("Scene 1,0");
+            }
+        }
+       else if (current.name == "Scene 0,0")
+        {
+            if (border == "North Border")
+            {
+                return;
+            }
+           else if (border == "South Border")
+            {
+                SceneManager.LoadScene("Scene 1,0");
+            }
+           else if (border == "East Border")
+            {
+                SceneManager.LoadScene("Scene 0,1");
+            }
+           else if (border == "West Border")
+            {
+                return;
+            }
+        }
+       else if (current.name == "Scene 0,1")
+        {
+            if (border == "North Border")
+            {
+                return;
+            }
+           else if (border == "South Border")
+            {
+                SceneManager.LoadScene("Scene 1,1");
+            }
+           else if (border == "East Border")
+            {
+                SceneManager.LoadScene("Scene 0,2");
+            }
+           else if (border == "West Border")
+            {
+                SceneManager.LoadScene("Scene 0,0");
+            }
+        }
+       else if (current.name == "Scene 0,2")
+        {
+            if (border == "North Border")
+            {
+                return;
+            }
+           else if (border == "South Border")
+            {
+                SceneManager.LoadScene("Scene 1,2");
+            }
+           else if (border == "East Border")
+            {
+                return;
+            }
+           else if (border == "West Border")
+            {
+                SceneManager.LoadScene("Scene 0,1");
+            }
+        }
+       else if (current.name == "Scene 1,0")
+        {
+            if (border == "North Border")
+            {
+                SceneManager.LoadScene("Scene 0,0");
+            }
+           else if (border == "South Border")
+            {
+                SceneManager.LoadScene("Scene 2,0");
+            }
+           else if (border == "East Border")
+            {
+                SceneManager.LoadScene("Scene 1,1");
+            }
+           else if (border == "West Border")
+            {
+                return;
+            }
+        }
+       else if (current.name == "Scene 1,2")
+        {
+            if (border == "North Border")
+            {
+                SceneManager.LoadScene("Scene 0,2");
+            }
+           else if (border == "South Border")
+            {
+                SceneManager.LoadScene("Scene 2,2");
+            }
+           else if (border == "East Border")
+            {
+                return;
+            }
+           else if (border == "West Border")
+            {
+                SceneManager.LoadScene("Scene 1,1");
+            }
+        }
+       else if (current.name == "Scene 2,0")
+        {
+            if (border == "North Border")
+            {
+                SceneManager.LoadScene("Scene 1,0");
+            }
+           else if (border == "South Border")
+            {
+                return;
+            }
+          else  if (border == "East Border")
+            {
+                SceneManager.LoadScene("Scene 2,1");
+            }
+          else  if (border == "West Border")
+            {
+                return;
+            }
+        }
+      else  if (current.name == "Scene 2,1")
+        {
+            if (border == "North Border")
+            {
+                SceneManager.LoadScene("Scene 1,1");
+            }
+           else if (border == "South Border")
+            {
+                return;
+            }
+           else if (border == "East Border")
+            {
+                SceneManager.LoadScene("Scene 2,2");
+            }
+           else if (border == "West Border")
+            {
+                SceneManager.LoadScene("Scene 2,0");
+            }
+        }
+      else  if (current.name == "Scene 2,2")
+        {
+            if (border == "North Border")
+            {
+                SceneManager.LoadScene("Scene 1,2");
+            }
+           else if (border == "South Border")
+            {
+                return;
+            }
+           else if (border == "East Border")
+            {
+                return;
+            }
+           else if (border == "West Border")
+            {
+                SceneManager.LoadScene("Scene 2,1");
+            }
+        }
+       
 
     }
 
