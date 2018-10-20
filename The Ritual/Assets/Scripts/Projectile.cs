@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
     public int damage;
     public LayerMask WhatIsSolid;
     public Rigidbody2D rigid;
+    public GameObject Foe1;
     
     // Use this for initialization
     void Start()
@@ -24,7 +25,7 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
        
-        if (collision.tag == "Foe")
+        if (collision.tag == "Collider")
         {
             GameObject.Destroy(this.gameObject);
         }
