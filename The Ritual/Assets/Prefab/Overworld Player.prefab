@@ -167,7 +167,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.375, y: 1.375}
+    oldSize: {x: 0.82, y: 0.82}
     newSize: {x: 1.375, y: 1.375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -188,11 +188,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 0}
+  rig: {fileID: 0}
   health: 100
   speed: 5
   ammoCount: 10
+  ThrowammoCount: 0
   Projectile: {fileID: 1777260482176474, guid: d4ae12d1abd73af48a8870fb0f622952, type: 2}
-  ShotPoint: {fileID: 4092360232257130}
   StartTimeBtwShot: 1
   attackRange: 3
   startTimeBtwAttack: 0.3
@@ -201,6 +202,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   damage: 10
+  startTimeBtwPower: 0
+  PowerRange: 0
+  startTimeBtwThrow: 0
 --- !u!114 &114147950140893164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -250,7 +254,7 @@ SpriteRenderer:
   m_SortingLayerID: -1506885581
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8fb98a6035269e64a998f9b56828fc4f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 052378744bf1dc9458a3b691f91b36a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
