@@ -62,11 +62,8 @@ public class Player : MonoBehaviour
 
             GameObject p = Instantiate(Projectile, transform.position, transform.rotation);
                 TimeBtwShot = StartTimeBtwShot;
-<<<<<<< HEAD
-                ammoCount -= 1;
-=======
+                GameManager.gm.ammoCount -= 1;
             GameManager.gm.ammoCount -= 1;
->>>>>>> 0671e40f25b5eb27437792fd0250f2ffc1b4336a
         }
         else
              {

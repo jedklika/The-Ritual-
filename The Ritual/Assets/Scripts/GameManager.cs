@@ -10,12 +10,7 @@ public class GameManager : MonoBehaviour {
     public int ammoCount;
     public int ThrowammoCount;
     public int health;
-<<<<<<< HEAD
     public int damage;
-=======
-    public int damage
->>>>>>> 0671e40f25b5eb27437792fd0250f2ffc1b4336a
-
     void Awake()
     {
 
