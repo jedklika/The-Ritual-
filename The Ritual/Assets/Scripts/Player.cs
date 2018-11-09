@@ -59,10 +59,12 @@ public class Player : MonoBehaviour
        // transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
         if (TimeBtwShot <= 0 && Input.GetMouseButtonDown(0) && ammoCount > 0)
             {
+            Debug.Log(GameManager.gm.ammoCount);
 
             GameObject p = Instantiate(Projectile, transform.position, transform.rotation);
                 TimeBtwShot = StartTimeBtwShot;
                 GameManager.gm.ammoCount -= 1;
+            Debug.Log(GameManager.gm.ammoCount);
             GameManager.gm.ThrowammoCount -= 1;
         }
         else
@@ -75,7 +77,8 @@ public class Player : MonoBehaviour
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
                 enemiesToDamage[i].GetComponent<EnemyAICombat>().TakeDamage(damage);
-
+                GameManager.gm.ammoCount -= 1;
+                
             }
             timeBtwAttack = startTimeBtwAttack;
         }
