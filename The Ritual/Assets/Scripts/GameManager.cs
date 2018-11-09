@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour {
         {
             if (border == "North Border")
             {
-                SceneManager.LoadScene("2,2");
+                SceneManager.LoadScene("Scene 2,2");
             }
            else if (border == "South Border")
             {
