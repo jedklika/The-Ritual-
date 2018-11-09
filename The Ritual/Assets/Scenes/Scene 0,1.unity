@@ -198,14 +198,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   col: {fileID: 0}
   rig: {fileID: 0}
-  health: 100
+  health: 10
   speed: 5
-  ammoCount: 0
-  ThrowammoCount: 0
-  Projectile: {fileID: 1777260482176474, guid: d4ae12d1abd73af48a8870fb0f622952, type: 2}
+  ammoCount: 10
+  ThrowammoCount: 10
+  Projectile: {fileID: 0}
   StartTimeBtwShot: 0
-  attackRange: 0
-  startTimeBtwAttack: 0
+  attackRange: 3
+  startTimeBtwAttack: 1
   attackPos: {fileID: 1136967404}
   whatIsEnemies:
     serializedVersion: 2
@@ -231,7 +231,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.375, y: 1.375}
+    oldSize: {x: 0.82, y: 0.82}
     newSize: {x: 1.375, y: 1.375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -276,7 +276,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8fb98a6035269e64a998f9b56828fc4f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 052378744bf1dc9458a3b691f91b36a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -602,6 +602,16 @@ Prefab:
       propertyPath: damage
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
+        type: 2}
+      propertyPath: ThrowammoCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
+        type: 2}
+      propertyPath: ammoCount
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edfbe1919297ee846a7039ea630c2381, type: 2}
   m_IsPrefabAsset: 0
@@ -833,12 +843,11 @@ Prefab:
         type: 2}
       propertyPath: Projectile
       value: 
-      objectReference: {fileID: 1777260482176474, guid: d4ae12d1abd73af48a8870fb0f622952,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114908525890262176, guid: 193322d13958f224197797df3f2ecd78,
         type: 2}
       propertyPath: health
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114908525890262176, guid: 193322d13958f224197797df3f2ecd78,
         type: 2}
@@ -870,6 +879,32 @@ Prefab:
       propertyPath: startTimeBtwThrow
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114908525890262176, guid: 193322d13958f224197797df3f2ecd78,
+        type: 2}
+      propertyPath: startTimeBtwAttack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114908525890262176, guid: 193322d13958f224197797df3f2ecd78,
+        type: 2}
+      propertyPath: attackRange
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114908525890262176, guid: 193322d13958f224197797df3f2ecd78,
+        type: 2}
+      propertyPath: ammoCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114908525890262176, guid: 193322d13958f224197797df3f2ecd78,
+        type: 2}
+      propertyPath: ThrowammoCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 212199035831549100, guid: 193322d13958f224197797df3f2ecd78,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 052378744bf1dc9458a3b691f91b36a8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 193322d13958f224197797df3f2ecd78, type: 2}
   m_IsPrefabAsset: 0
