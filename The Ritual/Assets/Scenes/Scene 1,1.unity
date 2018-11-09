@@ -426,8 +426,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Foe: {fileID: 1241716607954102, guid: 0b32ab113b54b1e4192903da42d7eadf, type: 2}
-  ammoCount: 0
-  ThrowammoCount: 0
+  ammoCount: 10
+  ThrowammoCount: 10
+  health: 10
+  damage: 10
 --- !u!4 &2022510530
 Transform:
   m_ObjectHideFlags: 0
@@ -504,6 +506,21 @@ Prefab:
         type: 2}
       propertyPath: m_BodyType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114133150577546372, guid: 4aff911c64a15c54ba6ea3785b59f4da,
+        type: 2}
+      propertyPath: Projectile
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114133150577546372, guid: 4aff911c64a15c54ba6ea3785b59f4da,
+        type: 2}
+      propertyPath: StartTimeBtwShot
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114133150577546372, guid: 4aff911c64a15c54ba6ea3785b59f4da,
+        type: 2}
+      propertyPath: startTimeBtwThrow
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aff911c64a15c54ba6ea3785b59f4da, type: 2}
