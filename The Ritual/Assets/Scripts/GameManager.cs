@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour {
     public int ThrowammoCount;
     public int health;
     public int damage;
-    public bool haveAmmo;
     void Awake()
     {
 
@@ -25,17 +24,6 @@ public class GameManager : MonoBehaviour {
         StartCoroutine(SpawnEnemy());
         
     }
-    private void Update()
-    {
-        if(ammoCount > 0)
-        {
-            haveAmmo = true;
-        }
-        else
-        {
-            haveAmmo = false;
-        }
-    } 
     public void LevelLoader(string border)
     {
         Scene current = SceneManager.GetActiveScene();
