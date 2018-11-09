@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour {
         {
             if (border == "North Border")
             {
-                return;
+                SceneManager.LoadScene("Scene 2,0");
             }
            else if (border == "South Border")
             {
@@ -63,14 +63,14 @@ public class GameManager : MonoBehaviour {
             }
            else if (border == "West Border")
             {
-                return;
+                SceneManager.LoadScene("Scene 0,2");
             }
         }
        else if (current.name == "Scene 0,1")
         {
             if (border == "North Border")
             {
-                return;
+                SceneManager.LoadScene("2,1");
             }
            else if (border == "South Border")
             {
@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour {
         {
             if (border == "North Border")
             {
-                return;
+                SceneManager.LoadScene("2,2");
             }
            else if (border == "South Border")
             {
@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour {
             }
            else if (border == "East Border")
             {
-                return;
+                SceneManager.LoadScene("Scene 0,0");
             }
            else if (border == "West Border")
             {
@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour {
             }
            else if (border == "West Border")
             {
-                return;
+                SceneManager.LoadScene("Scene 1,2");
             }
         }
        else if (current.name == "Scene 1,2")
@@ -135,7 +135,7 @@ public class GameManager : MonoBehaviour {
             }
            else if (border == "East Border")
             {
-                return;
+                SceneManager.LoadScene("1,0");
             }
            else if (border == "West Border")
             {
@@ -150,7 +150,7 @@ public class GameManager : MonoBehaviour {
             }
            else if (border == "South Border")
             {
-                return;
+                SceneManager.LoadScene("Scene 0,0");
             }
           else  if (border == "East Border")
             {
@@ -158,7 +158,7 @@ public class GameManager : MonoBehaviour {
             }
           else  if (border == "West Border")
             {
-                return;
+                SceneManager.LoadScene("Scene 2,2");
             }
         }
       else  if (current.name == "Scene 2,1")
@@ -169,7 +169,7 @@ public class GameManager : MonoBehaviour {
             }
            else if (border == "South Border")
             {
-                return;
+                SceneManager.LoadScene("Scene 0,1");
             }
            else if (border == "East Border")
             {
@@ -188,11 +188,11 @@ public class GameManager : MonoBehaviour {
             }
            else if (border == "South Border")
             {
-                return;
+                SceneManager.LoadScene("Scene 0,2");
             }
            else if (border == "East Border")
             {
-                return;
+                SceneManager.LoadScene("Scene 2,0");
             }
            else if (border == "West Border")
             {
