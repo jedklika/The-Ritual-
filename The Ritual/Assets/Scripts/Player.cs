@@ -85,7 +85,7 @@ public class Player : MonoBehaviour
         {
             timeBtwAttack -= Time.deltaTime;
         }
-        if (timeBtwThrow <= 0 && Input.GetKeyDown(KeyCode.P) && ThrowammoCount > 0)
+        if (Input.GetKeyDown(KeyCode.P) && GameManager.gm.ThrowammoCount > 0)
         {
             Debug.Log(GameManager.gm.ammoCount);
 
