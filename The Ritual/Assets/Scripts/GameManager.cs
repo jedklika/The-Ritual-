@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour {
         StartCoroutine(SpawnEnemy());
         
     }
-    private void Update()
+        private void Update()
     {
         if(ammoCount > 0)
         {
@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour {
         {
             if (border == "North Border")
             {
-                SceneManager.LoadScene("2,1");
+                SceneManager.LoadScene("Scene 2,1");
             }
            else if (border == "South Border")
             {
