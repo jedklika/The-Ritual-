@@ -65,7 +65,6 @@ public class Player : MonoBehaviour
                 TimeBtwShot = StartTimeBtwShot;
                 GameManager.gm.ammoCount -= 1;
             Debug.Log(GameManager.gm.ammoCount);
-            GameManager.gm.ThrowammoCount -= 1;
         }
         else
              {
@@ -86,17 +85,16 @@ public class Player : MonoBehaviour
         {
             timeBtwAttack -= Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.P) && ThrowammoCount > 0)
+        if (timeBtwThrow <= 0 && Input.GetKeyDown(KeyCode.P) && ThrowammoCount > 0)
         {
-           // Instantiate(Projectile, ShotPoint.position, transform.rotation);
-            timeBtwThrow = startTimeBtwThrow;
-            GameManager.gm.ThrowammoCount -= 1;
-        }
-        else
-        {
-            timeBtwThrow -= Time.deltaTime;
+            Debug.Log(GameManager.gm.ammoCount);
 
+            GameObject p = Instantiate(Projectile, transform.position, transform.rotation);
+            timeBtwThrow = StartTimeBtwShot;
+            GameManager.gm.ThrowammoCount -= 1;
+            Debug.Log(GameManager.gm.ThrowammoCount);
         }
+
         if (Input.GetKeyDown(KeyCode.Space) && timeBtwPower <= 0)
         {
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, PowerRange, whatIsEnemies);
