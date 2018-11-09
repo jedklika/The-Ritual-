@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed;
+    public float speed = 2;
     public float lifeTime;
     private Vector3 target;
     public float distance;
@@ -12,20 +12,20 @@ public class Projectile : MonoBehaviour
     public LayerMask WhatIsSolid;
     public Rigidbody2D rigid;
     public GameObject Foe1;
+    public Rigidbody2D myrb;
     
     // Use this for initialization
     void Start()
     {
-   
+        myrb = GetComponent<Rigidbody2D>();
         target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         target.z = 0.0f;
         target = target - transform.position;
-        StartCoroutine(DestroyBullet());
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
        
-        if (collision.tag == "Collider")
+        if (collision.tag == "North Border" || collision.tag == "South Border" || collision.tag == "East Border" || collision.tag == "West Border" )
         {
             GameObject.Destroy(this.gameObject);
         }
@@ -34,14 +34,11 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        myrb.velocity = target * speed;
+        //transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
 
 
     }
-    IEnumerator DestroyBullet()
-    {
-        yield return new WaitForSeconds(1f);
-        Destroy(gameObject);
-    }
+   
 }
