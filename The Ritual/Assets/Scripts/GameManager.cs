@@ -147,7 +147,7 @@ public class GameManager : MonoBehaviour {
             }
            else if (border == "East Border")
             {
-                SceneManager.LoadScene("1,0");
+                SceneManager.LoadScene("Scene 1,0");
             }
            else if (border == "West Border")
             {
