@@ -16,8 +16,6 @@ public class Player : MonoBehaviour
     public int ammoCount;
     public int ThrowammoCount;
     public GameObject Projectile;
-   // public GameObject point;
-    public Transform ShotPoint;
     private float TimeBtwShot;
     public float StartTimeBtwShot;
     public float attackRange;
@@ -59,13 +57,14 @@ public class Player : MonoBehaviour
         //Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
        // float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
        // transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
-        if (TimeBtwShot <= 0 && Input.GetMouseButtonDown(0) && ammoCount > 0)
+        if (GameManager.gm.haveAmmo && Input.GetMouseButtonDown(0))
             {
+            Debug.Log(GameManager.gm.ammoCount);
 
-             GameObject p = Instantiate(Projectile, transform.position, transform.rotation);
-               // Destroy(round);
+            GameObject p = Instantiate(Projectile, transform.position, transform.rotation);
                 TimeBtwShot = StartTimeBtwShot;
-            ammoCount -= 1;
+                GameManager.gm.ammoCount -= 1;
+            Debug.Log(GameManager.gm.ammoCount);
         }
         else
              {
@@ -77,7 +76,8 @@ public class Player : MonoBehaviour
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
                 enemiesToDamage[i].GetComponent<EnemyAICombat>().TakeDamage(damage);
-
+                GameManager.gm.ammoCount -= 1;
+                
             }
             timeBtwAttack = startTimeBtwAttack;
         }
@@ -85,23 +85,22 @@ public class Player : MonoBehaviour
         {
             timeBtwAttack -= Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.P) && ThrowammoCount > 0)
+        if (Input.GetKeyDown(KeyCode.P) && GameManager.gm.ThrowammoCount > 0)
         {
-            Instantiate(Projectile, ShotPoint.position, transform.rotation);
-            timeBtwThrow = startTimeBtwThrow;
-            ThrowammoCount -= 1;
-        }
-        else
-        {
-            timeBtwThrow -= Time.deltaTime;
+            Debug.Log(GameManager.gm.ammoCount);
 
+            GameObject p = Instantiate(Projectile, transform.position, transform.rotation);
+            timeBtwThrow = StartTimeBtwShot;
+            GameManager.gm.ThrowammoCount -= 1;
+            Debug.Log(GameManager.gm.ThrowammoCount);
         }
+
         if (Input.GetKeyDown(KeyCode.Space) && timeBtwPower <= 0)
         {
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, PowerRange, whatIsEnemies);
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
-                enemiesToDamage[i].GetComponent<EnemyAICombat>().TakeDamage(damage);
+                enemiesToDamage[i].GetComponent<EnemyAICombat>().TakeDamage(GameManager.gm.damage);
 
             }
             timeBtwPower = startTimeBtwPower;
@@ -139,15 +138,15 @@ public class Player : MonoBehaviour
         if (collision.tag == "GunAmmo")
         {
             ammoCount += 1;
-            Debug.Log("" + ammoCount);
+            GameManager.gm.ammoCount += 1;
         }
         if (collision.tag == "Throw Ammo")
         {
-            ThrowammoCount += 1;
+            GameManager.gm.ThrowammoCount += 1;
         }
         if (collision.tag == "Health")
         {
-            health += 1;
+            GameManager.gm.health += 1;
         }
     }
 }

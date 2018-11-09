@@ -29,6 +29,14 @@ public class EnemyAICombat : MonoBehaviour {
     {
         health -= damage;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Projectile")
+        {
+            TakeDamage(GameManager.gm.damage);
+        }
+    }
+
 
     // Update is called once per frame
     void Update() {
