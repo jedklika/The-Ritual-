@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
             GameObject p = Instantiate(Projectile, transform.position, transform.rotation);
                 TimeBtwShot = StartTimeBtwShot;
                 GameManager.gm.ammoCount -= 1;
-            GameManager.gm.ammoCount -= 1;
+            GameManager.gm.ThrowammoCount -= 1;
         }
         else
              {
@@ -137,15 +137,15 @@ public class Player : MonoBehaviour
         if (collision.tag == "GunAmmo")
         {
             ammoCount += 1;
-            Debug.Log("" + ammoCount);
+            GameManager.gm.ammoCount += 1;
         }
         if (collision.tag == "Throw Ammo")
         {
-            ThrowammoCount += 1;
+            GameManager.gm.ThrowammoCount += 1;
         }
         if (collision.tag == "Health")
         {
-            health += 1;
+            GameManager.gm.health += 1;
         }
     }
 }
