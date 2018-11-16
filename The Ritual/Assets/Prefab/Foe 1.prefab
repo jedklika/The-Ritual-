@@ -192,7 +192,7 @@ MonoBehaviour:
   retreatDistance: 1
   health: 10
   StartTimeBtwShot: 1
-  Projectile: {fileID: 1059189550690438, guid: 1badfecbd38d52244959a32ee4310832, type: 2}
+  Projectile: {fileID: 1421441468263372, guid: 1badfecbd38d52244959a32ee4310832, type: 2}
 --- !u!114 &114660904862577458
 MonoBehaviour:
   m_ObjectHideFlags: 1

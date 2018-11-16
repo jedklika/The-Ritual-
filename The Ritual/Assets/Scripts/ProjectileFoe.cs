@@ -32,7 +32,7 @@ public class ProjectileFoe : MonoBehaviour
         {
             Player.GetComponent<Player>().TakeDamage(damage);
             GameObject.Destroy(this.gameObject);
-            GameManager.gm.HealthText.text = "Health: " +- GameManager.gm.health;
+            GameManager.gm.HealthText.text = "Health: "  +- GameManager.gm.health;
         }
     }
 }

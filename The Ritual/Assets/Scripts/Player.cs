@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        GameManager.gm.health -= damage;
     }
     void Update()
     {

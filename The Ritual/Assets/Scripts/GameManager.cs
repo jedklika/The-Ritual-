@@ -26,13 +26,10 @@ public class GameManager : MonoBehaviour {
     }
     void Start()
     {
-        HealthText.text = "Health: " + health;
-        BulletsText.text = "Bullets: " + ammoCount;
-        ThrowAmmoText.text = "Throw ammo: " + ThrowammoCount;
         StartCoroutine(SpawnEnemy());
         
     }
-        private void Update()
+        public void Update()
     {
         if(ammoCount > 0)
         {
@@ -42,6 +39,9 @@ public class GameManager : MonoBehaviour {
         {
             haveAmmo = false;
         }
+        HealthText.text = "Health: " + health;
+        BulletsText.text = "Bullets: " + ammoCount;
+        ThrowAmmoText.text = "Throw ammo: " + ThrowammoCount;
     } 
     public void LevelLoader(string border)
     {
