@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -139,18 +140,22 @@ public class Player : MonoBehaviour
         {
             ammoCount += 1;
             GameManager.gm.ammoCount += 1;
+            GameManager.gm.BulletsText.text = "Bullets: " + ammoCount;
         }
         if (collision.tag == "Throw Ammo")
         {
             GameManager.gm.ThrowammoCount += 1;
+            GameManager.gm.ThrowAmmoText.text = "Throw ammo: " + ThrowammoCount;
         }
         if (collision.tag == "Health")
         {
             GameManager.gm.health += 1;
+            GameManager.gm.HealthText.text = "Health: " + health;
         }
         if (collision.tag == "MegaHealth")
         {
             GameManager.gm.health += 10;
+            GameManager.gm.HealthText.text = "Health: " + health;
         }
     }
 }

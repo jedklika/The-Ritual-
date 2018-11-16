@@ -28,6 +28,7 @@ public class Shooter : MonoBehaviour
             {
                 Instantiate(Projectile, ShotPoint.position, transform.rotation);
                 TimeBtwShot = StartTimeBtwShot;
+                GameManager.gm.BulletsText.text = "Bullets: " +- GameManager.gm.ammoCount;
             }
         }
         else
