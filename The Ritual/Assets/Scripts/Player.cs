@@ -148,5 +148,9 @@ public class Player : MonoBehaviour
         {
             GameManager.gm.health += 1;
         }
+        if (collision.tag == "MegaHealth")
+        {
+            GameManager.gm.health += 10;
+        }
     }
 }
