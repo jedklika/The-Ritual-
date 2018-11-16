@@ -780,7 +780,7 @@ Transform:
   - {fileID: 245200105}
   - {fileID: 1544921964}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &848004693
 Prefab:
@@ -907,7 +907,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4814434956843580, guid: ea407092854b7cd4086eca2fb598f918, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 61285829919625558, guid: ea407092854b7cd4086eca2fb598f918,
         type: 2}
@@ -974,6 +974,83 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b478599ad2a3b9442b3aa683b4e02c99, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1001 &1298087567
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4153410054438228, guid: edfbe1919297ee846a7039ea630c2381, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.2918036
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153410054438228, guid: edfbe1919297ee846a7039ea630c2381, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.4343549
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153410054438228, guid: edfbe1919297ee846a7039ea630c2381, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.068874195
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153410054438228, guid: edfbe1919297ee846a7039ea630c2381, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153410054438228, guid: edfbe1919297ee846a7039ea630c2381, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153410054438228, guid: edfbe1919297ee846a7039ea630c2381, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153410054438228, guid: edfbe1919297ee846a7039ea630c2381, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153410054438228, guid: edfbe1919297ee846a7039ea630c2381, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
+        type: 2}
+      propertyPath: ammoCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
+        type: 2}
+      propertyPath: ThrowammoCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
+        type: 2}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
+        type: 2}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
+        type: 2}
+      propertyPath: HealthText
+      value: 
+      objectReference: {fileID: 1871292086}
+    - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
+        type: 2}
+      propertyPath: BulletsText
+      value: 
+      objectReference: {fileID: 1442888009}
+    - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
+        type: 2}
+      propertyPath: ThrowAmmoText
+      value: 
+      objectReference: {fileID: 160078158}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: edfbe1919297ee846a7039ea630c2381, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1417606376
 Prefab:
   m_ObjectHideFlags: 0
@@ -1011,7 +1088,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4550776067442926, guid: 1c70ced432b7a8848ac8cf3138c49303, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c70ced432b7a8848ac8cf3138c49303, type: 2}
@@ -1525,55 +1602,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2022510528
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2022510530}
-  - component: {fileID: 2022510529}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2022510529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2022510528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd7ffc527b4c66f41bd5a7378d4a46e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Foe: {fileID: 1241716607954102, guid: 0b32ab113b54b1e4192903da42d7eadf, type: 2}
-  ammoCount: 10
-  ThrowammoCount: 10
-  health: 10
-  damage: 10
-  HealthText: {fileID: 1871292086}
-  BulletsText: {fileID: 1442888009}
-  ThrowAmmoText: {fileID: 160078158}
-  haveAmmo: 0
---- !u!4 &2022510530
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2022510528}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2918036, y: -1.4343549, z: -0.068874195}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2079878956
 GameObject:
   m_ObjectHideFlags: 0

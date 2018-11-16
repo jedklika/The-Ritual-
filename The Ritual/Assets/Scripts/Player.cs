@@ -155,7 +155,6 @@ public class Player : MonoBehaviour
         if (collision.tag == "MegaHealth")
         {
             GameManager.gm.health += 10;
-            GameObject.Destroy(gameObject.tag "MegaHealth");
             GameManager.gm.HealthText.text = "Health: " + GameManager.gm.health;
         }
     }
