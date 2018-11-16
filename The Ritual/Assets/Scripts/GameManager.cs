@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class GameManager : MonoBehaviour {
@@ -11,6 +12,9 @@ public class GameManager : MonoBehaviour {
     public int ThrowammoCount;
     public int health;
     public int damage;
+    public Text HealthText;
+    public Text BulletsText;
+    public Text ThrowAmmoText;
     public bool haveAmmo;
     void Awake()
     {
@@ -22,6 +26,9 @@ public class GameManager : MonoBehaviour {
     }
     void Start()
     {
+        HealthText.text = "Health: " + health;
+        BulletsText.text = "Bullets: " + ammoCount;
+        ThrowAmmoText.text = "Throw ammo: " + ThrowammoCount;
         StartCoroutine(SpawnEnemy());
         
     }

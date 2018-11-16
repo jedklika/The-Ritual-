@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shooter : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class Shooter : MonoBehaviour
             {
                 Instantiate(Projectile, ShotPoint.position, transform.rotation);
                 TimeBtwShot = StartTimeBtwShot;
+                GameManager.gm.BulletsText.text = "Bullets: " +- GameManager.gm.ammoCount;
             }
         }
         else
