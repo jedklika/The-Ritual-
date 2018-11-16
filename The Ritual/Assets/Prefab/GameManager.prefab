@@ -52,3 +52,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Foe: {fileID: 1241716607954102, guid: 0b32ab113b54b1e4192903da42d7eadf, type: 2}
+  ammoCount: 10
+  ThrowammoCount: 10
+  health: 10
+  damage: 10
+  HealthText: {fileID: 0}
+  BulletsText: {fileID: 0}
+  ThrowAmmoText: {fileID: 0}
+  canvas: {fileID: 0}
+  haveAmmo: 0

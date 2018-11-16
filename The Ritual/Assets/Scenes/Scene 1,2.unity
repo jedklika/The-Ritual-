@@ -824,26 +824,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
         type: 2}
-      propertyPath: ammoCount
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
-        type: 2}
-      propertyPath: ThrowammoCount
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
-        type: 2}
-      propertyPath: health
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
-        type: 2}
-      propertyPath: damage
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
-        type: 2}
       propertyPath: HealthText
       value: 
       objectReference: {fileID: 1789386364}
@@ -857,6 +837,11 @@ Prefab:
       propertyPath: ThrowAmmoText
       value: 
       objectReference: {fileID: 1778081238}
+    - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
+        type: 2}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 275795198}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edfbe1919297ee846a7039ea630c2381, type: 2}
   m_IsPrefabAsset: 0
@@ -1419,7 +1404,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Throwable Ammo
+  m_Text: Throw Ammo
 --- !u!222 &1778081239
 CanvasRenderer:
   m_ObjectHideFlags: 0

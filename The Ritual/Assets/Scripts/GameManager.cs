@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
     public GameObject Foe;
-    public static GameManager gm = null;
+    public static GameManager gm;
     public int ammoCount;
     public int ThrowammoCount;
     public int health;
@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
     public Text HealthText;
     public Text BulletsText;
     public Text ThrowAmmoText;
+    public Canvas canvas;
     public bool haveAmmo;
     void Awake()
     {
@@ -22,6 +23,8 @@ public class GameManager : MonoBehaviour {
         if (gm == null) gm = this;
         else if (gm != null) Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(canvas);
+
 
     }
     void Start()
@@ -63,7 +66,6 @@ public class GameManager : MonoBehaviour {
            else if(border == "West Border")
             {
                 SceneManager.LoadScene("Scene 1,0");
-              
             }
         }
        else if (current.name == "Scene 0,0")
