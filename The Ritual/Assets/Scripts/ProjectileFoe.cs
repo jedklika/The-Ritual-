@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class ProjectileFoe : MonoBehaviour {
+public class ProjectileFoe : MonoBehaviour
+{
     public float speed;
     public float lifeTime;
     private Transform Player;
@@ -12,7 +14,7 @@ public class ProjectileFoe : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-      //  Invoke("DestroyProjectile", lifeTime);
+        //  Invoke("DestroyProjectile", lifeTime);
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         target = new Vector2(Player.position.x, Player.position.y);
 
@@ -22,14 +24,15 @@ public class ProjectileFoe : MonoBehaviour {
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
-        
+
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             Player.GetComponent<Player>().TakeDamage(damage);
-            GameObject.Destroy(this.gameObject);      
+            GameObject.Destroy(this.gameObject);
+            GameManager.gm.HealthText.text = "Health: " +- GameManager.gm.health;
         }
     }
 }

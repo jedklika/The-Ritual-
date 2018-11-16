@@ -140,22 +140,22 @@ public class Player : MonoBehaviour
         {
             ammoCount += 1;
             GameManager.gm.ammoCount += 1;
-            GameManager.gm.BulletsText.text = "Bullets: " + ammoCount;
+            GameManager.gm.BulletsText.text = "Bullets: " + GameManager.gm.ammoCount;
         }
         if (collision.tag == "Throw Ammo")
         {
             GameManager.gm.ThrowammoCount += 1;
-            GameManager.gm.ThrowAmmoText.text = "Throw ammo: " + ThrowammoCount;
+            GameManager.gm.ThrowAmmoText.text = "Throw ammo: " + GameManager.gm.ThrowammoCount;
         }
         if (collision.tag == "Health")
         {
             GameManager.gm.health += 1;
-            GameManager.gm.HealthText.text = "Health: " + health;
+            GameManager.gm.HealthText.text = "Health: " + GameManager.gm.health;
         }
         if (collision.tag == "MegaHealth")
         {
             GameManager.gm.health += 10;
-            GameManager.gm.HealthText.text = "Health: " + health;
+            GameManager.gm.HealthText.text = "Health: " + GameManager.gm.health;
         }
     }
 }
