@@ -1226,6 +1226,26 @@ Prefab:
       propertyPath: damage
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
+        type: 2}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 70213891}
+    - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
+        type: 2}
+      propertyPath: HealthText
+      value: 
+      objectReference: {fileID: 200096966}
+    - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
+        type: 2}
+      propertyPath: BulletsText
+      value: 
+      objectReference: {fileID: 108593098}
+    - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
+        type: 2}
+      propertyPath: ThrowAmmoText
+      value: 
+      objectReference: {fileID: 83744926}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edfbe1919297ee846a7039ea630c2381, type: 2}
   m_IsPrefabAsset: 0

@@ -1291,6 +1291,11 @@ Prefab:
       propertyPath: ThrowAmmoText
       value: 
       objectReference: {fileID: 1691972018}
+    - target: {fileID: 114795199654600080, guid: edfbe1919297ee846a7039ea630c2381,
+        type: 2}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 185732752}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edfbe1919297ee846a7039ea630c2381, type: 2}
   m_IsPrefabAsset: 0
